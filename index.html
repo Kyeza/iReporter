@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>iReporter</title>
-		<meta http-equiv="refresh" content="1">
+		<meta http-equiv="refresh" content="60">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,31 +15,11 @@
 			html, body {
 				font-family: Helvetica, sans-serif;
 				margin: 0;
-				background-color: grey;	
-				height: 100%;
-			}
-
-			.container {
-			  	height: 100%;
-			  	min-height: 100%;
-			  	display: flex;
-			  	flex-direction: column;
-			}
-
-			.container .box-1 {
-			  	flex: 2;
-			}
-
-			.container .box-2 {
-			  	flex: 5;
-			}
-
-			.container .box-3 {
-			  	flex: 3;
+				background-color: grey;
 			}
 
 			/* Style the top navigation bar */
-			.container .navbar {
+			.navbar {
 				display: flex;
 				justify-content: flex-end;
 				align-items: baseline;
@@ -47,7 +27,7 @@
 			}
 
 			/* Style the navigation bar links */
-			.container .navbar a {
+			.navbar a {
 				color: white;
 				padding: 14px 20px;
 				text-decoration: none;
@@ -55,7 +35,7 @@
 			}
 
 			/* Change color on hover */
-			.container .navbar a:hover {
+			.navbar a:hover {
 			  	background-color: #ddd;
 			  	color: black;
 			}
@@ -69,7 +49,7 @@
 			}
 
 			/* Column container */
-			.container .row {
+			.row {
 				display: flex;
 				flex-wrap: wrap;
 			}
@@ -88,45 +68,115 @@
 				padding: 20px;
 			}
 
-			.container .footer {
+			/* Footer */
+			.footer {
 			  	padding: 20px;
 			  	text-align: center;
 			  	background: #ddd;
 			}
 
-			@media screen and (max-width: 700px) {
-				.row {
+			@media screen and (max-width: 800px) {
+				.row, .navbar {
 					flex-direction: column;
 				}
 			}
+
+			/* Side bar subtitle */
+			#sign-in-log-in-subtitle {
+				text-align: center; padding: 10px; background-color: black;
+				font-size: 1.5vw; font-weight: 400; color: white;
+			}
+
+			/* Form */
+			form {
+				background-color: #eee; margin: 20px auto auto auto; padding: 20px;
+			}
+
+			input[type=text], input[type=email], input[type=password], select {
+			  	width: 100%;
+			  	padding: 12px 20px;
+			  	margin: 8px 0;
+			  	display: inline-block;
+			  	border: 1px solid #ccc;
+			  	box-sizing: border-box;
+			}
+
+			input[type=submit] {
+			  	width: 100%;
+			  	background-color: #4CAF50;
+			  	color: white;
+			  	padding: 14px 20px;
+			  	margin: 8px 0;
+			  	border: none;
+			  	cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+			  	background-color: #45a049;
+			}
 		</style>
 	</head>
-	<body>
-		<div class="container">
-			<!-- Navigation bar -->
-			<div class="navbar box-1">
-				<!-- Logo -->
-				<a id="irepoter-logo" href="#">
-					<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
-				</a>
-			  	<a href="#">Login</a>
-			  	<a href="#">Sign up</a>		
-			</div>
-
-			<!-- Main content -->
-			<section class="row box-2" style="flex-grow: 8">
-				<div class="main">
-					
-				</div>
-				<aside class="side">
-					
-				</aside>
-			</section>
-
-			<!-- Footer -->
-			<footer class="footer box-3o" style="flex-grow: 1">
-				<h2>Footer</h2>
-			</footer>
+	<body onload="displaySignUpForm()">
+		<!-- Navigation bar -->
+		<div class="navbar">
+			<!-- Logo -->
+			<a id="irepoter-logo" href="#">
+				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
+			</a>
+		  	<a href="#" onclick="displaySignInForm()">Login</a>
+		  	<a href="#" onclick="displaySignUpForm()">Sign up</a>		
 		</div>
+
+		<!-- Main content -->
+		<section class="row">
+			<div class="main">
+				
+			</div>
+			<aside class="side">
+				<div id="sign-in-log-in-subtitle">Sign Up</div>
+				<form  id="sign-up-form" action="">
+					<label for="user">Username</label>
+					<input type="text" id="user" name="username" placeholder="username" required>
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" placeholder="user@email.com" required>
+
+					<label for="pw">Password</label>
+					<input type="password" id="pw" name="password" required>
+
+					<label for="cpw">Password confirmation</label>
+					<input type="password" id="cpw" name="confirmpassword" required>
+
+					<input type="submit" value="Submit">
+				</form>
+
+				<form style="margin-bottom: 150px" id="sign-in-form" action="">
+					<label for="user">Username/ Email</label>
+					<input type="text" id="user" name="username" placeholder="username" required>
+
+					<label for="pw">Password</label>
+					<input type="password" id="pw" name="password" required>
+
+					<input type="submit" value="Submit">
+				</form>
+			</aside>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h2>Footer</h2>
+		</footer>
+
+		<script type="text/javascript">
+			function displaySignInForm() {
+				document.getElementById("sign-up-form").style.display = "none";
+				document.getElementById("sign-in-form").style.display = "block";
+			}
+
+			function displaySignUpForm() {
+				document.getElementById("sign-in-form").style.display = "none";
+				document.getElementById("sign-up-form").style.display = "block";
+			}
+		</script>
 	</body>
 </html>
