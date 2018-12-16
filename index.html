@@ -37,8 +37,7 @@
 				padding: 3px; 
 				background-color: red; 
 				color: white;
-				font-size: 14px; 
-				font-family: Aerial, sans-serif;
+				font-size: 14px;
 				font-weight: 400; 
 				text-align: center; 
 				border: none;
@@ -83,7 +82,7 @@
 		<!-- Navigation bar -->
 		<div class="navbar">
 			<!-- Logo -->
-			<a id="irepoter-logo" href="#">
+			<a id="irepoter-logo" href="index.html">
 				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
 			</a>
 		  	<a href="#" onclick="displaySignInForm()">Login</a>
@@ -92,6 +91,7 @@
 
 		<!-- Main content -->
 		<section class="row">
+			<!-- Main coulmn -->
 			<div class="main">
 				<div class="box" style="position: relative; justify-content: flex-end;">
 					<div class="color-box-small" style="background-color: orange;">
@@ -100,24 +100,31 @@
 					<img style="max-width: 100%" src="images/corruption.jpg">
 				</div>
 			</div>
+
+			<!-- Side column -->
 			<aside class="side">
+				<!-- Sign in or Sign Up title -->
 				<div id="sign-in-log-in-subtitle">Sign Up</div>
+
+				<!-- Sign Up form -->
 				<form  id="sign-up-form" action="">
+					<!-- username -->
 					<label for="user">Username</label>
 					<input type="text" id="user" name="username" placeholder="username" required>
-
+					<!-- email -->
 					<label for="email">Email</label>
 					<input type="email" id="email" name="email" placeholder="user@email.com" required>
-
+					<!-- password -->
 					<label for="pw">Password</label>
 					<input type="password" id="pw" name="password" required>
-
+					<!-- confirm password -->
 					<label for="cpw">Password confirmation</label>
 					<input type="password" id="cpw" name="confirmpassword" required>
-
+					<!-- submit -->
 					<input type="submit" value="Submit">
 				</form>
 
+				<!-- Login from -->
 				<form style="margin-bottom: 150px" id="sign-in-form" action="">
 					<label for="user">Username/ Email</label>
 					<input type="text" id="user" name="username" placeholder="username" required>
