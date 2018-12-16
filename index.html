@@ -20,6 +20,41 @@
 				background-color: #eee; margin: 20px auto auto auto; padding: 20px;
 			}
 
+			.color-box-small {
+				display: flex;
+				width: 50%;
+			  	padding: 20px;
+			  	margin: 10px;
+			  	line-height: 50px;
+			  	justify-content: center;
+		 	 	position: absolute;
+			}
+
+			.report-button {
+				-webkit-transition-duration: 0.4s; /* Safari */
+    			transition-duration: 0.4s;
+				width: 200px;  
+				padding: 10px; 
+				background-color: red; 
+				color: white;
+				font-size: 14px; 
+				font-family: Aerial, sans-serif;
+				font-weight: 400; 
+				text-align: center; 
+				border: none;
+			}
+
+			a.report-button {
+				text-decoration: none;
+			}
+
+			a.report-button:hover {
+				text-decoration: none;
+				background-color: white;
+				color: black;
+				font-size-adjust: 25px;
+			}
+
 			.box {
 				display: flex;
 				height: 100%;
@@ -44,7 +79,10 @@
 		<!-- Main content -->
 		<section class="row">
 			<div class="main">
-				<div class="box">
+				<div class="box" style="position: relative; justify-content: flex-end;">
+					<div class="color-box-small" style="background-color: orange;">
+						<a class="report-button" href="create_reflag.html">REPORT <em>!</em></a>
+					</div>
 					<img style="max-width: 100%" src="images/corruption.jpg">
 				</div>
 			</div>
