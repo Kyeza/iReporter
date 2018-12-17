@@ -42,16 +42,16 @@ html, body {
 .body-container {
 	display: flex;
   	justify-content: center;
-  	background-color: #fff;
+  	background-color: #f1f1f1;
   	color: #595959;
 }
 
 .body-container .container {
 	display: flex;
   	flex-direction: column;
-	background-color: #f1f1f1;
+	background-color: #fff;
   	width: 700px;
-	margin: 10px;
+	margin: 10px 10px 100px 10px;
 	padding: 10px;
 }
 
@@ -61,6 +61,7 @@ html, body {
 	margin: 5px auto 60px auto;
 	padding: 20px;
   	font-size: 16px;
+	border: 1px solid #404040;
 }
 
 /* Column container */
@@ -103,7 +104,7 @@ html, body {
 	  	width: 100%;
 	}
 
-	.row, .navbar {
+	.row, .navbar, .record-heading {
 		flex-direction: column;
 	}
 
@@ -146,4 +147,67 @@ input[type=submit] {
 
 input[type=submit]:hover {
   	background-color: #45a049;
+}
+
+.button {
+	width: 100%;
+  	background-color: #4CAF50;
+  	color: white;
+  	padding: 14px 20px;
+  	margin: 8px 0;
+  	border: none;
+  	cursor: pointer;
+}
+
+.button:hover {
+  	background-color: #45a049;
+}
+
+#small-btn {
+	width: 90px;
+}
+
+.tag {
+	margin: 0;
+	padding: 2px 10px 6px 10px;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.red-flag {
+	background-color: red;
+}
+
+.intervention {
+	background-color: purple;
+}
+
+.status {
+	background-color: #0099ff;
+}
+
+.record-heading {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0
+	padding: 0;
+	align-items: baseline;
+}
+
+.record-heading > div {
+	margin: 0 3px;
+	padding: 0;
+}	
+
+.record-title {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+	.record-heading {
+		margin-bottom: 28px;
+	}
 }
