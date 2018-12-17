@@ -7,6 +7,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<style type="text/css">
+			.profile-row {  
+		  		display: flex;
+			  	flex-wrap: wrap;
+			  	border-radius: 4px;
+			}
+
+			.profile-picture {
+			  flex: 30%;
+			  background-color: #f1f1f1;
+			  padding: 20px;
+			}
+
+			.profile-details {
+			  flex: 70%;
+			  background-color: white;
+			  padding: 20px;
+			}
+
+			.username {
+				margin: 0;
+				font-size: 40px;
+				font-weight: 600;
+			}
+
+			.useremail {
+				margin: 10px 5px;
+				font-size: 13px;
+				font-weight: 400;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Navigation bar -->
@@ -18,6 +50,21 @@
 			<a href="profile_home.html" onclick="">Home</a>
 		  	<a href="user_profile.html" onclick="">Profile</a>
 		  	<a href="index.html" onclick="">Sign out</a>		
+		</div>
+
+		<!-- Main content -->
+		<div class="body-container">
+			<div class="container">
+				<div class="profile-row">
+					<div class="profile-picture">
+						<img src="images/ic_profile.png" style="border-radius: 50%; height: 150px;">
+					</div>
+					<div class="profile-details">
+						<p class="username">KyezaMs</p>
+						<p class="useremail">kyezaarnold@gmail.com</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer -->
