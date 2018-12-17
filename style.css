@@ -42,14 +42,14 @@ html, body {
 .body-container {
 	display: flex;
   	justify-content: center;
-  	background-color: #fff;
+  	background-color: #f1f1f1;
   	color: #595959;
 }
 
 .body-container .container {
 	display: flex;
   	flex-direction: column;
-	background-color: #f1f1f1;
+	background-color: #fff;
   	width: 700px;
 	margin: 10px 10px 100px 10px;
 	padding: 10px;
@@ -199,7 +199,7 @@ input[type=submit]:hover {
 .record-heading > div {
 	margin: 0 3px;
 	padding: 0;
-}
+}	
 
 .record-title {
 	font-size: 15px;

@@ -68,16 +68,27 @@
 		<!-- Navigation bar -->
 		<div class="navbar">
 			<!-- Logo -->
-			<a id="irepoter-logo" href="index.html">
+			<a id="irepoter-logo" href="profile_home.html">
 				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
 			</a>
-		  	<a href="#" onclick="">Profile</a>
-		  	<a href="#" onclick="">Sign out</a>		
+			<a href="profile_home.html" onclick="">Home</a>
+		  	<a href="user_profile.html" onclick="">Profile</a>
+		  	<a href="index.html" onclick="">Sign out</a>		
 		</div>
 
 		<!-- Main content -->
 		<div class="body-container">
 			<div class="container">
+				<div>
+					<form action="create_redflag.html">
+						<button style="background-color: #ff8080" class="button" type="submit">Create new red-flag</span></button>
+					</form>
+					<form action="create_intervention.html">
+						<button style="background-color: #cc00cc" class="button" type="submit">Create new intervention</span></button>
+					</form>
+				</div>
+
+				<div style="padding: 5px; background-color: #f2f2f2; color: #8c8c8c; margin: 0; border: none;">Recently posted</div>
 				<!-- Post 1 -->
 				<div>
 					<div class="heading-container">
@@ -91,7 +102,7 @@
 					<div class="record-heading">
 						<div id="title"><p class="record-title">Poverty in Andela</p></div>
 						<div id="record-type"><span class="tag intervention">intervention</span></div>
-						<div id="recode-status"></div>
+						<div id="recode-status"><span class="tag status">draft</span></div>
 					</div>
 					<div class="fakeimg" style="height: 200px;">Fake Image/Video</div>
 					<p>
