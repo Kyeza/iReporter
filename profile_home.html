@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Home</title>
+		<meta http-equiv="refresh" content="60">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<style type="text/css">
+			.post-header {
+				margin: 0;
+				color: #0099ff;
+				font-size: 14px;
+			}
+
+			#date {
+				font-size: 10px;
+				color: #a6a6a6;
+				font-weight: bold;
+			}
+
+			.fakeimg {
+			  background-color: #aaa;
+			  width: 100%;
+			  padding: 20px;
+			}
+
+			.heading-container {
+				display: flex;
+				align-content: flex-start;
+				margin: 0;
+			}
+
+			#edit-ic {
+				margin-left: auto;
+				width: 75px;
+				padding: 0 0 auto 0;
+			}
+
+			#edit-ic > p, img {
+				font-size: 13px;
+				display: inline;
+				cursor: pointer;
+			}
+
+			#edit-options-container {
+				display: none;
+				padding: 0;
+			}
+
+			#edit-options {
+				display: flex;
+				flex-direction: row-reverse;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+
+			#edit-options > button {
+				margin: 0 10px;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<div class="navbar">
+			<!-- Logo -->
+			<a id="irepoter-logo" href="index.html">
+				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
+			</a>
+		  	<a href="#" onclick="">Profile</a>
+		  	<a href="#" onclick="">Sign out</a>		
+		</div>
+
+		<!-- Main content -->
+		<div class="body-container">
+			<div class="container">
+				<!-- Post 1 -->
+				<div>
+					<div class="heading-container">
+						<p class="post-header"><strong>KyezaMS</strong> <span id="date"><script>document.write(new Date().toDateString());</script></span></p>
+						<div id="edit-ic" onclick="displayEditOptions()">
+							<p style="margin: 0">Edit</p>
+							<img style="width: 11px; height: 11px;" src="images/ic_edit.png">
+						</div>
+					</div>
+					<hr style="width: 100%; margin-bottom: 20px;">
+					<div class="record-heading">
+						<div id="title"><p class="record-title">Poverty in Andela</p></div>
+						<div id="record-type"><span class="tag intervention">intervention</span></div>
+						<div id="recode-status"></div>
+					</div>
+					<div class="fakeimg" style="height: 200px;">Fake Image/Video</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<div id="edit-options-container">
+						<div id="edit-options">
+							<button class="button" id="small-btn" onclick="cancelEditOptions()">Cancel</button>
+							<button class="button" id="small-btn">Save</button>
+							<button class="button" id="small-btn" style="background-color: #ff3333;">Delete</button>
+							<button class="button" id="small-btn">Edit</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 2 -->
+				<div>
+					<div class="heading-container">
+						<p class="post-header"><strong>Stanely Barna</strong> <span id="date"><script>document.write(new Date('Tuesday Dec 11 2018').toDateString());</script></span></p>
+						<div id="edit-ic" onclick="displayEditOptions()" style="display: none">
+							<p style="margin: 0">Edit</p>
+							<img style="width: 11px; height: 11px;" src="images/ic_edit.png">
+						</div>
+					</div>
+					<hr style="width: 100%; margin-bottom: 20px;">
+
+					<div class="record-heading">
+						<div id="title"><p class="record-title">Corruption at Xente</p></div>
+						<div id="record-type"><span class="tag red-flag">red-flag</span></div>
+						<div id="recode-status"><span class="tag status">under investigation</span></div>
+					</div>
+					<div class="fakeimg" style="height: 200px;">Fake Image/Video</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+
+				<!-- Post 3 -->
+				<div>
+					<div class="heading-container">
+						<p class="post-header"><strong>Mike Mwes</strong> <span id="date"><script>document.write(new Date('Tuesday Dec 11 2018').toDateString());</script></span></p>
+						<div id="edit-ic" onclick="displayEditOptions()" style="display: none">
+							<p style="margin: 0">Edit</p>
+							<img style="width: 11px; height: 11px;" src="images/ic_edit.png">
+						</div>
+					</div>
+					<div class="record-heading">
+						<div id="title"><p class="record-title">Match fixing in Uganda</p></div>
+						<div id="record-type"><span class="tag red-flag">red-flag</span></div>
+						<div id="recode-status"><span class="tag status">resolved</span></div>
+					</div>
+					<div class="fakeimg" style="height: 200px;">Fake Image/Video</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h2>Footer</h2>
+		</footer>
+
+		<script>
+		    function displayEditOptions() {
+		    	document.getElementById('edit-options-container').style.display = "block";
+		    }
+
+		    function cancelEditOptions() {
+		    	document.getElementById('edit-options-container').style.display = "none";
+		    }
+		</script>
+	</body>
+</html>
