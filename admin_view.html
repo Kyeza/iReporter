@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Site administration | iReporter</title>
+		<meta http-equiv="refresh" content="60">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<style type="text/css">
+			.header {
+				font-size: 25px;
+				font-weight: 600px;
+				background-color: #1a1a1a;
+				color: white;
+				padding: 20px;
+			}
+
+			.menu {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+			}
+
+			.menu > div {
+				padding: 5px;
+				background-color: #4CAF50;
+				margin: 5px;
+			}
+
+			.menu > div > a {
+				text-decoration: none;
+				width: 100%;
+				color: white;
+			}
+
+			.menu > div > a:hover {
+				text-decoration: none;
+				color: white;
+				background-color: #80ff80;
+			}
+
+			.menu > div:hover {
+				color: white;
+				background-color: #80ff80;
+			}
+
+			.frame {
+				width: 100%;
+				height: 100%;
+				border: none;
+				margin: 10px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<div class="navbar">
+			<!-- Logo -->
+			<a id="irepoter-logo" href="index.html">
+				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
+			</a>
+			<a href="index.html" onclick="">Visit site</a>
+		  	<a href="index.html" onclick="">Sign out</a>		
+		</div>
+		
+		<!-- Main content -->
+		<div class="row">
+			<div class="side">
+				<p class="header">Site administration</p>
+				<div class="menu">
+					<div><a href="admin_users.html" target="iframe_a">Users</a></div>
+					<div><a href="admin_redflags.html" target="iframe_a">Red-flags</a></div>
+					<div><a href="admin_interventions.html" target="iframe_a">Interventions</a></div>
+				</div>
+			</div>
+			<div class="main">
+				<iframe class="frame" src="demo_iframe.html" name="iframe_a"></iframe>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h2>Footer</h2>
+		</footer>
+	</body>
+</html>
