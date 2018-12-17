@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Proile</title>
+		<meta http-equiv="refresh" content="60">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<style type="text/css">
+			.profile-row {  
+		  		display: flex;
+			  	flex-wrap: wrap;
+			  	border-radius: 4px;
+			}
+
+			.profile-picture {
+			  flex: 30%;
+			  background-color: #f1f1f1;
+			  padding: 20px;
+			}
+
+			.profile-details {
+			  flex: 70%;
+			  background-color: white;
+			  padding: 20px;
+			}
+
+			.username {
+				margin: 0;
+				font-size: 40px;
+				font-weight: 600;
+			}
+
+			.useremail {
+				margin: 10px 5px;
+				font-size: 13px;
+				font-weight: 400;
+			}
+
+			@media screen and (max-width: 500px) {
+				.profile-picture {
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			.info-header {
+				margin: 20px auto 0 0;
+				font-size: 20px;
+				font-weight: 600;
+				text-align: left;
+			}
+
+			hr {
+				width: 100%;
+				margin: 0 0 20px 0;
+			}
+
+			table {
+			    border-collapse: collapse;
+			    width: 100%;
+			}
+
+			th {
+				background-color: #f1f1f1;
+			} 
+
+			td, th{
+			    padding: 8px;
+			    text-align: center;
+			    border: none;
+			}
+
+			#indent-left {
+				text-align: left;
+			}
+
+			tr:nth-child(2) > td {
+				text-align: center;
+			}
+
+			tr:hover {background-color:#f5f5f5;}
+
+			.data > td:nth-child(1) > a {
+				color: #0099ff;
+				max-width: 150px;
+				overflow: hidden;
+			}
+
+			.data > td:nth-child(1) > a:hover {
+				color: #0099ff;
+				width: 100px;
+				max-width: 100px;
+				min-width: 100px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<div class="navbar">
+			<!-- Logo -->
+			<a id="irepoter-logo" href="profile_home.html">
+				<strong><span style="font-style: italic; color: red; font-size: 3vw;">i</span>Reporter</strong>
+			</a>
+			<a href="profile_home.html" onclick="">Home</a>
+		  	<a href="user_profile.html" onclick="">Profile</a>
+		  	<a href="index.html" onclick="">Sign out</a>		
+		</div>
+
+		<!-- Main content -->
+		<div class="body-container">
+			<div class="container">
+				<div class="profile-row">
+					<div class="profile-picture">
+						<img src="images/ic_profile.png" style="border-radius: 50%; height: 150px;">
+					</div>
+					<div class="profile-details">
+						<p class="username">KyezaMs</p>
+						<p class="useremail">kyezaarnold@gmail.com</p>
+					</div>
+					<p class="info-header">Profile Info</p>
+					<hr>
+					<div style="overflow-x:auto; width: 100%;  background-color: white; padding: 5px;">
+						<table>
+						  	<tr>
+					    		<th>Red-flag/Intervation</th>
+							    <th>Draft</th>
+							    <th>Under investigation</th>
+							    <th>Resolved</th>
+							    <th>Rejected</th>
+						  	</tr>
+						  	<tr>
+					    		<td>4</td>
+							    <td>2</td>
+							    <td>1</td>
+							    <td>1</td>
+							    <td>0</td>
+						  	</tr>
+						  	<tr class="data">
+						  		<td id="indent-left"><a href="profile_home.html#post1">Poverty in An...</a></td>
+						  		<td><img src="images/ic_success.png" style="border-radius: 50%; height: 25px;"></td>
+						  		<td></td>
+						  		<td></td>
+						  		<td></td>
+						  	</tr>
+						  	<tr class="data">
+						  		<td id="indent-left"><a href="profile_home.html#post3">Museveni stole ...</a></td>
+						  		<td></td>
+						  		<td><img src="images/ic_success.png" style="border-radius: 50%; height: 25px;"></td>
+						  		<td></td>
+						  		<td></td>
+						  	</tr>
+						  	<tr class="data">
+						  		<td id="indent-left"><a href="profile_home.html#post4">People Power ...</a></td>
+						  		<td><img src="images/ic_success.png" style="border-radius: 50%; height: 25px;"></td>
+						  		<td></td>
+						  		<td></td>
+						  		<td></td>
+						  	</tr>
+						  	<tr class="data">
+						  		<td id="indent-left"><a href="profile_home.html#post5">Entebbe express ...</a></td>
+						  		<td></td>
+						  		<td></td>
+						  		<td><img src="images/ic_success.png" style="border-radius: 50%; height: 25px;"></td>
+						  		<td></td>
+						  	</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<h2>Footer</h2>
+		</footer>
+	</body>
+</html>
