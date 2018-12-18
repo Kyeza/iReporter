@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change red-flag status</title>
+		<meta http-equiv="refresh" content="60">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style type="text/css">
+			.header {
+				font-size: 17px;
+				font-weight: 600px;
+				background-color: #333333;
+				color:  white;
+				padding: 20px;
+				margin: 0;
+			}
+
+			.header-small {
+				font-size: 17px;
+				font-weight: 600px;
+				background-color: #333333;
+				color:  white;
+				padding: 10px;
+				margin: 0;
+			}
+
+			.row-admin {
+				display: flex;
+				flex-wrap: row;
+			}
+
+			.main-admin {
+				flex: 70%;
+				background-color: white;
+				padding: 20px 20px 20px 0;
+			}
+
+			.side-admin {
+				flex: 30%;
+				background-color: #f1f1f1;
+				padding: 20px;	
+			}
+
+			form {
+				width: 100%;
+				margin: 10px auto;
+				padding: 5px;
+			}
+
+			@media screen and (max-width: 500px) {
+				.row-admin {
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				.main-admin {
+					padding: 20px 0;
+				}
+			}
+
+			input[type=submit] {
+			  	width: 100%;
+			  	background-color: #4CAF50;
+			  	color: white;
+			  	padding: 4px;
+			  	margin: 0;
+			  	border: none;
+			  	cursor: pointer;
+			}
+
+			table {
+			    border-collapse: collapse;
+			    width: 100%;
+			}
+
+			th {
+				background-color: #f1f1f1;
+			}
+
+			th, td {
+			    padding: 8px;
+			    text-align: left;
+			    border-bottom: 1px solid #ddd;
+			}
+
+			tr:hover {background-color:#f5f5f5;}
+
+			.button {
+				width: 100%;
+			  	background-color: orange;
+			  	color: white;
+			  	padding: 6px 20px;
+			  	margin: 0;
+			  	border: none;
+			  	cursor: pointer;
+			}
+
+			.button:hover {
+			  	background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row-admin">
+			<div class="main-admin">
+				<p class="header">Change red-flag status</p>
+				<form>
+					<input style="width: 70%;" type="text" name="Search" required>
+					<input style="width: 20%;" type="submit" value="Search">
+				</form>
+
+				<table>
+				  	<tr>
+				    	<th>RED-FLAG</th>
+				    	<th>USER</th>
+				    	<th>STATUS</th>
+				    	<th>ACTION</th>
+				  	</tr>
+				  	<tr>
+				    	<td>Corruption in X...</td>
+				    	<td>Stanely Barna</td>
+				    	<td>under investigation</td>
+				    	<td><button class="button">CHANGE STATUS</button></td>
+				  	</tr>
+				  	<tr>
+				    	<td>Match fixing i...</td>
+				    	<td>Mike Mwes</td>
+				    	<td>resolved</td>
+				    	<td><button class="button">CHANGE STATUS</button></td>
+				  	</tr>
+				  	<tr>
+				    	<td>People power affi...</td>
+				    	<td>KyezaMs</td>
+				    	<td>draft</td>
+				    	<td><button class="button">CHANGE STATUS</button></td>
+				  	</tr>
+				</table>
+			</div>
+			<div class="side-admin">
+				<div class="header-small">FILTER</div>
+				<p style="font-size: 18px; font-weight: 400px; margin-bottom: 0;">By status</p>
+				<form action="">
+				  <input type="radio" name="option" value="all" checked> All<br>
+				  <input type="radio" name="option" value="yes"> Yes<br>
+				  <input type="radio" name="option" value="no"> No<br><br>
+				  <input type="submit" value="Go">
+				</form> 
+			</div>
+		</div>
+	</body>
+</html>
